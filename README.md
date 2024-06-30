@@ -3,6 +3,7 @@ A react application demonstrating am dashboard for monitoring faults across IT d
 
 ## Technologies used
 - React
+- Tailwindcss
 - Plotly
 - AG Grid
 
