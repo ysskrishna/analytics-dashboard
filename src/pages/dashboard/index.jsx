@@ -63,10 +63,10 @@ const Dashboard = () => {
     );
   });
 
-  const top10AlarmsByTotalDuration =  getTop10ErrorCodesByTotalDuration(pageData);
-  const top10AlarmsByFrequency =  getTop10ErrorCodesByFrequency(pageData);
-  const alarmTotalDurationByErrorCategory =  getAlarmTotalDurationByErrorCategory(pageData);
-  const alarmFrequencyByErrorCategory =  getAlarmFrequencyByErrorCategory(pageData);
+  const top10AlarmsByTotalDuration =  getTop10ErrorCodesByTotalDuration(filteredData);
+  const top10AlarmsByFrequency =  getTop10ErrorCodesByFrequency(filteredData);
+  const alarmTotalDurationByErrorCategory =  getAlarmTotalDurationByErrorCategory(filteredData);
+  const alarmFrequencyByErrorCategory =  getAlarmFrequencyByErrorCategory(filteredData);
 
   // console.log("pageData", pageData);
 
@@ -104,7 +104,7 @@ const Dashboard = () => {
                 </svg>
               </div>
             </summary>
-            <div className='flex flex-col md:flex-row gap-2 flex-wrap'>
+            <div className='flex flex-col md:flex-row gap-2'>
               <div className="mb-4 min-w-[200px]">
                 <label className="block mb-2 text-sm font-medium text-gray-700">System</label>
                 <select
@@ -239,7 +239,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <Table data={pageData} />
+      <Table data={filteredData} />
     
     </div>
   )

@@ -1,5 +1,6 @@
-# IT Analytics Dashboard
-A react application demonstrating am dashboard for monitoring faults across IT devices.
+# MetricFlow - IT analytics dashboard-monitoring tool
+
+A React-based client application for visualizing and monitoring faults across IT devices
 
 ## Technologies used
 - React
@@ -31,14 +32,17 @@ http://localhost:5173/
 ```
 
 ## Dashboard:
-<img src="./images/dashboard-1.JPG" alt="Dashboard 1"/>
+<img src="./media/dashboard-1.JPG" alt="Dashboard "/>
 
 ### Filters expanded
-<img src="./images/dashboard-4.JPG" alt="Dashboard 4"/>
+<img src="./media/dashboard-2.JPG" alt="Dashboard Filters expanded"/>
 
 ### Graphs view
-<img src="./images/dashboard-2.JPG" alt="Dashboard 2"/>
+<img src="./media/dashboard-3.JPG" alt="Dashboard Graphs view"/>
 
 ### Table view
-<img src="./images/dashboard-3.JPG" alt="Dashboard 3"/>
+<img src="./media/dashboard-4.JPG" alt="Dashboard Table view"/>
 
+<video width="320" height="240" controls>
+  <source src="./media/metricflow_demo.mp4" type="video/mp4">
+</video>

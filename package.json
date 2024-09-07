@@ -4,7 +4,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "A React-based client application for visualizing and analyzing data with Plotly and AG Grid.",
+  "description": "A React-based client application for visualizing and monitoring faults across IT devices",
+  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
