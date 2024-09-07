@@ -26,14 +26,16 @@ const Table = ({ data }) => {
   }), []);
 
   return (
-    <div className="ag-theme-alpine pt-3 pb-6" style={{ height: 650 }}>
+    <div className="ag-theme-alpine flex-1 pt-3 pb-6 overflow-y-auto">
       <AgGridReact
         ref={gridApiRef}
         rowData={data}
         columnDefs={columnDefs}
         defaultColDef={defaultColDef}
         pagination={true} 
-        paginationPageSize={10} 
+        paginationPageSize={10}
+        paginationPageSizeSelector={[10, 20, 50, 100]}
+        domLayout="autoHeight"
       />
     </div>
   );

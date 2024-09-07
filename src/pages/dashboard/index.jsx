@@ -15,6 +15,7 @@ import {
   getAlarmTotalDurationByErrorCategory,
   getAlarmFrequencyByErrorCategory
 } from './utils';
+import Logo from '../../assets/logo.png';
 
 
 const Dashboard = () => {
@@ -67,15 +68,14 @@ const Dashboard = () => {
   const alarmTotalDurationByErrorCategory =  getAlarmTotalDurationByErrorCategory(pageData);
   const alarmFrequencyByErrorCategory =  getAlarmFrequencyByErrorCategory(pageData);
 
-  console.log("pageData", pageData);
+  // console.log("pageData", pageData);
 
   return (
     <div className="container mx-auto self-center w-4/5 max-w-[1500px] max-md:self-center max-md:w-[90%] max-sm:w-[90%]">
-      <h2 class="py-4 text-2xl font-extrabold">ANALYTICS DASHBOARD</h2>
 
-      <div className='flex flex-col md:flex-row'>
-        <div className="mb-4 min-w-[200px]">
-          {/* <label className="block mb-2 text-sm font-medium text-gray-700">Location</label> */}
+      <div className='flex flex-col md:flex-row pt-2 md:items-center'>
+        <img src={Logo} alt="MetricFlow" className="h-10 w-[200px]" />
+        <div className="my-4 min-w-[200px]">
           <select
             value={selectedLocation}
             onChange={handleLocationChange}
@@ -173,22 +173,22 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className='flex flex-col md:flex-row gap-2'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-2 '>
         <Card
           title={getTotalAlarmDuration(filteredData) || '-'}
-          subtitle="TOTAL ALARM DURATION"
+          subtitle="Total Alarm Duration"
         />
         <Card
           title={getTotalCountOfAlarms(filteredData) || '-'}
-          subtitle="TOTAL COUNT OF ALARMS"
+          subtitle="Total Count Of Alarms"
         />
         <Card
           title={getSystemWithMaxDurationAlarm(filteredData) || '-'}
-          subtitle="DEVICE WITH MAX DURATION ALARM"
+          subtitle="Device With Max Duration Alarm"
         />
         <Card
           title={getMaxDurationAlarmTime(filteredData) || '-'}
-          subtitle="MAX DURATION ALARM TIME"
+          subtitle="Max Duration Alarm Time"
         />
       </div>
 
